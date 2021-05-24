@@ -87,5 +87,9 @@ def page():
 
     st.markdown("***")
     st.markdown("<br>", unsafe_allow_html=True)
-    st.button("Add Intent")
+    add_btn = st.button("Add Intent")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    if add_btn:
+        st.markdown("<h3 style='text-align: center; color: #495057;'>Intent Name</h3>", unsafe_allow_html=True)
+        st.text_input('')

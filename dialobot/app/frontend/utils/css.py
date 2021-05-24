@@ -47,6 +47,10 @@ style = """
 
 .stMarkdown{
     height: fit-content;
+}
 
+.stTextInput > div > div {
+    color: #000000;
+    background-color: #ffffff;
 }
 """

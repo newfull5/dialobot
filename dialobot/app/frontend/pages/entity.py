@@ -51,5 +51,16 @@ def page():
 
     st.markdown("***")
     st.markdown("<br>", unsafe_allow_html=True)
-    st.button("Add Entity")
+    add_btn = st.button("Add Entity")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    if add_btn:
+        entity, synonyms = st.beta_columns([3, 7])
+
+        with entity:
+            st.markdown("<h3 style='text-align: center; color: #495057;'>Entity</h3>", unsafe_allow_html=True)
+            st.text_input(label='', value='Entity')
+
+        with synonyms:
+            st.markdown("<h3 style='text-align: center; color: #495057;'>Synonyms</h3>", unsafe_allow_html=True)
+            st.text_input(label='', value='Synonyms')
