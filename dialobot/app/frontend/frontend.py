@@ -45,13 +45,14 @@ class Frontend:
             "https://user-images.githubusercontent.com/38183241/118511978-5d537180-b76d-11eb-89bd-055cb9227725.png"
         )
 
-        current_page = "Intent Classification"
         page_names = list(self.pages.keys())
         buttons = st.sidebar.radio('', page_names)
 
-
         # 멀티 페이지 앱을 돌리는 방법을 알아보았으나 radio버튼으로 구현하는 것이 최선이라고 한다. 디자인이 영 별로여서 나중에 회의때 부쳐봐야겠다.
-        """for i, button in enumerate(buttons):
+        """
+        current_page = "Intent Classification"
+        
+        for i, button in enumerate(buttons):
             if button:
                 current_page = page_names[i]"""
 

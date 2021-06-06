@@ -87,9 +87,36 @@ def page():
 
     st.markdown("***")
     st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("<h3 style='text-align: center; color: #495057;'>Intent Name</h3>", unsafe_allow_html=True)
+    tmp1, intent_input, tmp2 = st.beta_columns([1, 3, 1])
+    intent_input.text_input(label='', value='', help='Here you can specify the type of intent')
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.text_input(label="Expecting User's input: ", value='', key=1, help='Here you can specify the type of intent')
+    st.text_input(label="System replies: ", value='', key=1, help='Here you can specify the type of intent')
+
+
+
+
     add_btn = st.button("Add Intent")
     st.markdown("<br>", unsafe_allow_html=True)
 
-    if add_btn:
-        st.markdown("<h3 style='text-align: center; color: #495057;'>Intent Name</h3>", unsafe_allow_html=True)
-        st.text_input('')
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: #495057;'>Fallback Setting</h3>", unsafe_allow_html=True)
+    st.markdown('<br>', unsafe_allow_html=True)
+
+    st.markdown("***")
+    st.markdown("<div style='text-align: center; color: #212529;'>Default Replies</div>", unsafe_allow_html=True)
+    st.markdown("***")
+    st.markdown("<p style='text-align: center; color: #868e96;'> Sorry...?</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #868e96;'> Pardon me?</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #868e96;'> i didn't get it well...</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #868e96;'> could you say that again..?</p>", unsafe_allow_html=True)
+
+    st.text_input(label='', value='Add User expression')
+    st.markdown("***")
+
+
+
+    st.markdown("<p style='text-align: center; color: #495057;'>Fallback ratio</p>", unsafe_allow_html=True)
+    fallback_slider = st.slider('', 0, 100, 25, help='fallback is sadfsadf')

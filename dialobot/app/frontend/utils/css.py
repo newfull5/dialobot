@@ -53,4 +53,23 @@ style = """
     color: #000000;
     background-color: #ffffff;
 }
+
+input[type="radio"]:checked + div{
+    border: #3e82ba;
+    color: #3e82ba;
+}
+
+div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"] > div:first-child {
+    display: none;
+}
+
+div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"]{
+    margin: 15px auto 15px auto;
+}
+
+div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"] > div{
+    text-align: center;
+    font-size: 16.5px;
+}
+
 """
