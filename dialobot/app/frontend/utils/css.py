@@ -72,4 +72,32 @@ div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"] > 
     font-size: 16.5px;
 }
 
+section.main > div.block-container > div > div.element-container:first-child{
+    margin: -80px auto 0 auto;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"]{
+    flex-direction: row;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"]{
+    margin: -10px auto -20px auto;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"] > div{
+    font-size: 17.5px;
+    color: #495057;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"]:nth-child(1){
+    padding: 5px 20px 5px 10px;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"]:nth-child(2){
+    padding: 5px 20px 5px 10px;
+}
+
+section.main > div.block-container > div > div > div.row-widget.stRadio > div[role="radiogroup"] > label[data-baseweb="radio"]:nth-child(3){
+    padding: 5px 20px 5px 10px;
+}
 """

@@ -13,9 +13,22 @@
 # limitations under the License.
 
 import streamlit as st
-
+import pandas as pd
 
 def page():
+    st.markdown('***')
+    current_page = st.radio('', ['Intent Classification', 'Add Intent', 'Intent List'])
+    st.markdown('***')
+    page_keys = {
+        'Intent Classification': intent_classification_page,
+        'Add Intent': add_intent_page,
+        'Intent List': intent_list,
+    }
+
+    page_keys[current_page]()
+
+
+def intent_classification_page():
     st.title('Intent Classification')
     st.markdown("<br>", unsafe_allow_html=True)
     st.write(
@@ -88,14 +101,8 @@ def page():
     st.markdown("***")
     st.markdown("<br>", unsafe_allow_html=True)
 
-    add_btn = st.button("Add Intent")
 
-    if add_btn:
-        # Routing to Add Entity page
-        add_entity_page()
-
-
-def add_entity_page():
+def add_intent_page():
     st.markdown("<h3 style='text-align: center; color: #495057;'>Intent Name</h3>", unsafe_allow_html=True)
     tmp1, intent_input, tmp2 = st.beta_columns([1, 3, 1])
     intent_input.text_input(label='', value='', help='Here you can specify the type of intent')
@@ -123,3 +130,27 @@ def add_entity_page():
 
     st.markdown("<p style='text-align: center; color: #495057;'>Fallback ratio</p>", unsafe_allow_html=True)
     fallback_slider = st.slider('', 0, 100, 25, help='fallback is sadfsadf')
+
+    st.button('SAVE')
+
+
+def intent_list():
+    _, intent, _ = st.beta_columns([1,4,1])
+    _, data, _ = st.beta_columns([1,9,1])
+    intent_category = ['Default', 'Weather', 'Restaurant', 'Time']
+    replies = {
+        'Default': [],
+        'Weather': [],
+        'Restaurant': [],
+        'Time': []
+    }
+
+    with intent:
+        st.write()
+        dropdown = st.selectbox('', intent_category)
+
+    with data:
+        st.dataframe(pd.DataFrame({
+            'Sentences': ['오랜만이야','안녕','저기','잘 있었어','반가워'],
+            'Replies': ['안녕!','안녕하세요!','안녕','오랜만이야!','안녕!']
+        }), width=2000, height=400)
