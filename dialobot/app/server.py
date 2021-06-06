@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 임시 환경변수 세팅
-import sys
-sys.path.append('/Users/osaechan/PycharmProjects/dialobot')
-
 if __name__ == '__main__':
     from argparse import ArgumentParser
     parser = ArgumentParser()
