@@ -13,9 +13,6 @@
 # limitations under the License.
 
 
-import sys
-sys.path.append('/Users/osaechan/PycharmProjects/dialobot')
-
 if __name__ == '__main__':
     from argparse import ArgumentParser
     parser = ArgumentParser()
